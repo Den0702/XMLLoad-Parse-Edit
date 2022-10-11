@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>MyPage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <label class="custom-file-upload">
+      <input id="fileInput" type="file"/>
+      Upload XML
+    </label>
+
+    <button onclick="readFileFromInput()" class="grey-btn">Read file</button>
+    <button onclick="handleSaveClick()" class="grey-btn">Save cds to Local Storage</button>
+    <button onclick="handleLoadClick()" class="grey-btn">Load saved cds from Local Storage</button>
+	  <button onclick="alert(JSON.stringify(cds, null, 4))" class="grey-btn">
+      Show loaded CDs as json
+    </button>
+    <table id="myTable"></table>
+
+    <form
+      id="cdEditForm"
+      style="display: none;"
+      onsubmit="event.preventDefault()"
+    >
+      <table>
+        <div>
+          <tr>
+            <td>Title:</td>
+            <td><input type="text" name="TITLE" /></td>
+          </tr>
+        </div>
+        <div>
+          <tr>
+            <td>Artist:</td>
+            <td><input type="text" name="ARTIST" /></td>
+          </tr>
+        </div>
+        <div>
+          <tr>
+            <td>Country:</td>
+            <td><input type="text" name="COUNTRY" /></td>
+          </tr>
+        </div>
+        <div>
+          <tr>
+            <td>Company:</td> 
+            <td><input type="text" name="COMPANY" /></td>   
+          </tr>
+        </div>
+        <div>
+          <tr>
+            <td>Price:</td> 
+            <td><input type="number" name="PRICE" /></td>   
+          </tr>
+        </div>
+        <div>
+          <tr>
+            <td>Year:</td> 
+            <td><input type="number" name="YEAR" /></td>   
+          </tr>
+        </div>
+      </table>
+      <button onclick="handleEditCDFormSaveClick()" class="grey-btn">Save</button>
+      <button onclick="hideForm()" class="grey-btn">Cancel</button>
+    </form>
+  </body>
+</html>

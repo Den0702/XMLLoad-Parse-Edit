@@ -1,0 +1,83 @@
+html{
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+table {
+  margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  background: #eeeeee;
+}
+
+td,th {
+  padding: 6px 12px;
+}
+td {
+  border-right: 1px solid white;
+}
+
+th {
+  background-color: lightgrey;
+  text-align: left;
+}
+
+.block {
+  display: block;
+  width: 100%;
+}
+
+.red-btn {
+  background: rgb(255, 106, 92);
+  padding: 3px 6px;
+}
+
+.yellow-btn {
+  background: rgb(255, 255, 120);
+  padding: 3px 6px;
+}
+
+button {
+  margin-top:3px;
+  border: 1px solid white;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+/*button:hover {
+  opacity: .5;
+}*/
+
+button.red-btn:hover {
+  background: rgb(243, 85, 85);
+}
+
+button.yellow-btn:hover {
+  background: #ecec00;
+}
+button.grey-btn:hover{
+  background: rgb(214, 210, 210);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#cdEditForm {
+  position: fixed;
+  width: 300px;
+  top: 30%;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
